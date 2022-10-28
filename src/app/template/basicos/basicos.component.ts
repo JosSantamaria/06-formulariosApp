@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Form, NgForm } from '@angular/forms';
 
+//Template Form: La mayor parte de la logica que dicta el comportamiento esta indicado en el html(template).
+
 @Component({
   selector: 'app-basicos',
   templateUrl: './basicos.component.html',
@@ -12,9 +14,21 @@ export class BasicosComponent implements OnInit {
   //Nos permite poder ver elementos(hijos) dentro del componente padre(principal(basicos.component) )
   @ViewChild('miFormulario') miFormulario!: NgForm;
 
+  //Establecemos un valo inicial desde el [ngNodel] con []
+  //[ngModel]="initForm"
+  initForm = {
+    producto:'Tu producto(esto no es un placeholder)',
+    precio:0,
+    existencias:0
+  }
   constructor() { }
 
   ngOnInit(): void {
+
+    /**
+     * Podems
+     */
+
   }
 
   /** Acceso a controles de formulario:
@@ -49,7 +63,24 @@ export class BasicosComponent implements OnInit {
 
   // guardar( miFormulario: NgForm ){
   guardar( ){
-    console.log(this.miFormulario);
+
+    // console.log(this.miFormulario);
+    console.log('Posteo Correcto');
+    /**
+     * Reinicio de formulario (reinicia el pristine por ejemplo)
+     */
+
+    // this.miFormulario.resetForm();//Reinicio
+
+    /**
+     * Reinicio asignando valores a los inputs
+     */
+    this.miFormulario.resetForm({
+      precio:0,
+      existencias:0
+    });
+
+
   }
 
 
