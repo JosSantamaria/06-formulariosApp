@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { Form, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 //Template Form: La mayor parte de la logica que dicta el comportamiento esta indicado en el html(template).
 
