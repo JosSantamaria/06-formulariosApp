@@ -10,6 +10,12 @@ interface MenuItem //se crea para el mejos manejo de (objeto) rutas.
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styles: [
+    `
+    li{
+      cursor:pointer;
+    }
+
+    `
   ]
 })
 export class SidemenuComponent{
