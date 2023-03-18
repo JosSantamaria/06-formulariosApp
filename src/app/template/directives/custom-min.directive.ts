@@ -1,5 +1,5 @@
 import { Directive, Input } from "@angular/core";
-import { FormControl, NG_VALIDATORS, ValidationErrors, Validator } from "@angular/forms";
+import { UntypedFormControl, NG_VALIDATORS, ValidationErrors, Validator } from "@angular/forms";
 
 @Directive({
   selector: '[customMin][ngModel]',
@@ -38,7 +38,7 @@ export class CustomMinDirective implements Validator{
    * para poder usar sus propiedades, pasamos el parametro @param control
    * e indicamos que es de tipo @type FormControl
    */
-  validate( control: FormControl ){
+  validate( control: UntypedFormControl ){
     /**
      * Asignamos el valor recibido al @param control
      */
