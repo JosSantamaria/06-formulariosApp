@@ -5,7 +5,7 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-basicos',
-  templateUrl: './basicos.component.html',
+  templateUrl:'./basicos.component.html',
   styles: [
   ]
 })

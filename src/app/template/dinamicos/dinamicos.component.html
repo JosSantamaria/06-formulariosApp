@@ -1,4 +1,4 @@
-<h2> Template: <small></small> </h2>
+<h2> Template: <small>Dinamicos</small> </h2>
 <hr>
 
 <form (ngSubmit)="guardar()" #miFormulario="ngForm" autocomplete="off">
@@ -32,8 +32,8 @@
 
       <div class="input-group">
 
-        <input  class="form-control" 
-                type="text" 
+        <input  class="form-control"
+                type="text"
                 placeholder="Agregar Favorito"
 
                 [(ngModel)]="nuevoJuego"
@@ -42,7 +42,7 @@
                 required
                 >
 
-        <button class="btn btn-outline-primary" 
+        <button class="btn btn-outline-primary"
                 type="button"
                 (click)="agregarJuego()" >
           Agregar
@@ -66,22 +66,23 @@
 
         <!-- Recorremos el arreglo de favoritos con ngFor, agregamos al NgModel y creamos un Name
         Unico con name=favorito_{{ i (index) }} :: Tambien podemos manejarlo desde angular con [name]=" 'string'+ {{ i }} " -->
-        <input 
+        <input
+                class="form-control"
                 [(ngModel)]="juego.nombre"
                 name="favorito_{{ i }}"
-                class="form-control"
                 required
+                placeholder="Nombre Juego"
                 >
         <!-- Para asociar los valors en 'tiempo real', ponermos el ngModel en caja de bananas [(ngModel)] -->
         <!-- Creamos boton para eliminar objeto -->
-        <button class="btn btn-outline-danger" 
+        <button class="btn btn-outline-danger"
                 type="button"
                 (click)="eliminar(i)"
                 >
           Eliminar
         </button>
       </div>
-      
+
     </div>
 
     <!--  -->
@@ -91,7 +92,7 @@
   <div class="row">
     <div class="col-sm-9">
 
-      <button class="
+      <button type="submit"  class="
       btn
       btn-primary
       float-end"
